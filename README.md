@@ -24,7 +24,7 @@ Each project card flips on hover and takes you to the GitHub repo when clicked!
 
 ## Live Demo
 👉 *Hosted using GitHub Pages*  
-(Your live link will go here once deployed!)
+(https://eeshakarpuradu.github.io/portfolio/)
 
 ## Contact
 If you’d like to reach out or collaborate:
