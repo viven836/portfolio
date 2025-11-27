@@ -1,0 +1,1076 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #002949;
+  color: #ffa5c6;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 70px;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #002949;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 50px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #ffa5c6;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f974a6;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #f974a6;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -6px);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #003863;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  z-index: 999;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: all 0.3s ease;
+}
+
+.mobile-menu.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobile-menu a {
+  color: #ffa5c6;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.mobile-menu a:hover {
+  color: #f974a6;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Added to center the hero container horizontally */
+  padding: 100px 60px 60px;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Reduced max-width to bring content closer to center */
+  margin: 0 auto;
+  
+}
+
+.hero-content {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.hero-greeting {
+  font-size: 32px;
+  color: #ffa5c6;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+.hero-name {
+  font-family: "Abril Fatface", cursive;
+  font-size: 64px;
+  color: #f974a6;
+  margin-bottom: 15px;
+  line-height: 1.1;
+  font-weight: normal;
+}
+
+.hero-title {
+  font-size: 24px;
+  color: #ffa5c6;
+  margin-bottom: 40px;
+  font-weight: 400;
+}
+
+.resume-btn {
+  display: inline-block;
+  background-color: #f974a6;
+  color: #003863;
+  padding: 15px 35px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.resume-btn:hover {
+  background-color: #ffa5c6;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 20px rgba(249, 116, 166, 0.4);
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  max-height: 1000px;
+}
+
+/* About Section */
+.about {
+  padding: 80px 60px;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-top {
+  display: flex;
+  background-color: #ea528e;
+  border-radius: 30px;
+  padding: 50px;
+  margin-bottom: 30px;
+  gap: 40px;
+}
+
+.about-top-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.about-title {
+  font-family: "Abril Fatface", cursive;
+  font-size: 48px;
+  color: #003863;
+  line-height: 1.2;
+  font-weight: normal;
+}
+
+.about-top-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.about-top-text {
+  font-size: 18px;
+  color: #003863;
+  line-height: 1.7;
+  font-weight: 700;
+}
+
+.about-bottom {
+  display: flex;
+  gap: 30px;
+}
+
+.about-box {
+  flex: 1;
+  border-radius: 30px;
+  padding: 40px;
+}
+
+.about-box-blue {
+  background-color: #5caedd;
+}
+
+.about-box-pink {
+  background-color: #fc92b9;
+}
+
+.about-box-text1 {
+  font-size: 18px;
+  color: #ffffff;
+  line-height: 1.7;
+  font-weight: 500;
+}
+
+.about-box-text {
+  font-size: 18px;
+  color: #000000;
+  line-height: 1.7;
+  font-weight: 700;
+}
+
+.about-box-text-highlight {
+  font-size: 18px;
+  color: #000000;
+  line-height: 1.7;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+/* Skills Section */
+.skills {
+  padding: 80px 60px;
+}
+
+.skills-title {
+  font-family: "Abril Fatface", cursive;
+  font-size: 48px;
+  color: #f974a6;
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: normal;
+}
+
+.skills-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  background-color: #44abea;
+  border-radius: 40px;
+  padding: 60px 50px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px 30px;
+  justify-items: center;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.skill-item img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.skill-item span {
+  font-size: 16px;
+  font-weight: 700;
+  color: #003863;
+  text-align: center;
+}
+
+/* Projects Section */
+.projects {
+  padding: 80px 60px;
+}
+
+.projects-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 25px;
+}
+
+/* Title Card */
+.title-card {
+  background-color: #f9f1e9;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1 / 0.85;
+}
+
+.projects-title {
+  font-family: "Abril Fatface", cursive;
+  font-size: 40px;
+  color: #f974a6;
+  font-weight: normal;
+}
+
+/* Flip Card Styles */
+.project-card {
+  perspective: 1000px;
+  aspect-ratio: 1 / 0.85;
+}
+
+.flip-card {
+  cursor: pointer;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.flip-card-front {
+  background-color: #f5f0eb;
+}
+
+.flip-card-front.dark-front {
+  background-color: #1a1f2e;
+}
+
+.flip-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  padding: 25px;
+  text-align: center;
+}
+
+.pink-back {
+  background-color: #f974a6;
+}
+
+.blue-back {
+  background-color: #5caedd;
+}
+
+.darkblue-back {
+  background-color: #21A0EE;
+}
+
+.darkpink-back {
+  background-color: #EA528E;
+}
+
+.card-link {
+  text-decoration: none;
+  color: #003863;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.flip-card-back h3 {
+  font-family: "Abril Fatface", cursive;
+  font-size: 24px;
+  color: #001626;
+  margin-bottom: 15px;
+}
+
+.flip-card-back .arrow {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
+
+
+.card-description {
+  font-size: 16px;
+  font-weight: 700;
+  color: #001626;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.card-tech {
+  font-size: 14px;
+  font-weight: 700;
+  color: #001626;
+  line-height: 1.6;
+}
+
+.card-description1 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #001626;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.card-tech1 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #001626;
+  line-height: 1.6;
+}
+
+/* More Button Card */
+.more-card {
+  background-color: #fca2c3;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1 / 0.85;
+}
+
+.more-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.more-link span {
+  font-family: "Abril Fatface", cursive;
+  font-size: 36px;
+  color: #003863;
+}
+
+.more-link .arrow {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+}
+
+/* Placeholder Sections */
+.section {
+  min-height: 50vh;
+  padding: 100px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section h2 {
+  font-family: "Abril Fatface", cursive;
+  font-size: 48px;
+  color: #f974a6;
+}
+
+/* Contact Section */
+.contact {
+  padding: 80px 60px;
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-box {
+  background-color: #fc92b9;
+  border-radius: 40px;
+  padding: 60px 80px;
+  text-align: center;
+}
+
+.contact-title {
+  font-family: "Abril Fatface", cursive;
+  font-size: 48px;
+  color: #c51158;
+  margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.contact-subtitle {
+  font-family: "Abril Fatface", cursive;
+  font-size: 20px;
+  font-style: italic;
+  color: #c51158;
+  margin-bottom: 30px;
+    font-weight: lighter;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 35px;
+}
+
+.contact-icon {
+  color: #c51158;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.contact-icon:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.contact-btn {
+  display: inline-block;
+  background-color: #c51158;
+  color: #ffa5c6;
+  padding: 15px 40px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-family: "Abril Fatface", cursive;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #a30e4a;
+  transform: translateY(-3px);
+  /*box-shadow: 0 5px 20px rgba(197, 17, 88, 0.4);*/
+}
+
+/* Placeholder Sections - Remove or update */
+.section {
+  min-height: 50vh;
+  padding: 100px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section h2 {
+  font-family: "Abril Fatface", cursive;
+  font-size: 48px;
+  color: #f974a6;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .navbar {
+    padding: 20px 30px;
+  }
+
+  .hero {
+    padding: 100px 30px 60px;
+  }
+
+  .hero-name {
+    font-size: 48px;
+  }
+
+  .hero-greeting {
+    font-size: 26px;
+  }
+
+  .hero-title {
+    font-size: 20px;
+  }
+
+  .about {
+    padding: 60px 30px;
+  }
+
+  .about-top {
+    padding: 40px;
+  }
+
+  .about-title {
+    font-size: 40px;
+  }
+
+  .about-top-text,
+  .about-box-text,
+  .about-box-text-highlight {
+    font-size: 16px;
+  }
+
+  /* Add Skills responsive styles for tablet */
+  .skills {
+    padding: 60px 30px;
+  }
+
+  .skills-title {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+
+  .skills-container {
+    padding: 50px 40px;
+    border-radius: 30px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px 25px;
+  }
+
+  .skill-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  /* Projects responsive for tablet */
+  .projects {
+    padding: 60px 30px;
+  }
+
+  .projects-container {
+    gap: 20px;
+  }
+
+  .projects-title {
+    font-size: 36px;
+  }
+
+  .flip-card-back h3 {
+    font-size: 20px;
+  }
+
+  .card-description {
+    font-size: 13px;
+  }
+
+  .card-tech {
+    font-size: 12px;
+  }
+
+  .skill-item span {
+    font-size: 14px;
+  }
+
+  /* Contact responsive for tablet */
+  .contact {
+    padding: 60px 30px;
+  }
+
+  .contact-box {
+    padding: 50px 60px;
+  }
+
+  .contact-title {
+    font-size: 40px;
+  }
+
+  .contact-subtitle {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .mobile-menu {
+    display: flex;
+  }
+
+  .hero-container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-content {
+    padding-right: 0;
+  }
+
+  .hero-image {
+    margin-bottom: 30px;
+  }
+
+  .hero-image img {
+    max-height: 300px;
+  }
+
+  .hero-name {
+    font-size: 42px;
+  }
+
+  .hero-greeting {
+    font-size: 22px;
+  }
+
+  .hero-title {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  /* About Section Mobile */
+  .about-top {
+    flex-direction: column;
+    padding: 40px 30px;
+    gap: 20px;
+  }
+
+  .about-top-left,
+  .about-top-right {
+    text-align: left;
+  }
+
+  .about-title {
+    font-size: 36px;
+  }
+
+  .about-bottom {
+    flex-direction: column;
+  }
+
+  .about-box {
+    padding: 30px;
+    text-align: left;
+  }
+
+  .section {
+    padding: 80px 30px;
+  }
+
+  .section h2 {
+    font-size: 36px;
+  }
+
+  /* Add Skills responsive styles for mobile */
+  .skills {
+    padding: 60px 20px;
+  }
+
+  .skills-title {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+
+  .skills-container {
+    padding: 40px 30px;
+    border-radius: 25px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px 20px;
+  }
+
+  .skill-item img {
+    width: 55px;
+    height: 55px;
+  }
+
+  /* Projects responsive for mobile */
+  .projects {
+    padding: 60px 20px;
+  }
+
+  .projects-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Remove aspect-ratio on mobile for better stacking */
+  .project-card,
+  .title-card,
+  .more-card {
+    aspect-ratio: unset;
+    min-height: 200px;
+  }
+
+  .flip-card-inner,
+  .flip-card-front,
+  .flip-card-back {
+    min-height: 200px;
+  }
+
+  .projects-title {
+    font-size: 42px;
+  }
+
+  .flip-card-back h3 {
+    font-size: 22px;
+  }
+
+  .card-description {
+    font-size: 14px;
+  }
+
+  .card-tech {
+    font-size: 13px;
+  }
+
+  .more-link span,
+  .more-link .arrow {
+    font-size: 32px;
+  }
+
+  .skill-item span {
+    font-size: 14px;
+  }
+
+  /* Contact responsive for mobile */
+  .contact {
+    padding: 60px 20px;
+  }
+
+  .contact-box {
+    padding: 40px 30px;
+    border-radius: 30px;
+  }
+
+  .contact-title {
+    font-size: 36px;
+  }
+
+  .contact-subtitle {
+    font-size: 18px;
+  }
+
+  .contact-icons {
+    gap: 30px;
+  }
+
+  .contact-icon svg {
+    width: 35px;
+    height: 35px;
+  }
+
+  .contact-btn {
+    font-size: 18px;
+    padding: 12px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  .hero {
+    padding: 80px 20px 40px;
+  }
+
+  .hero-name {
+    font-size: 36px;
+  }
+
+  .hero-greeting {
+    font-size: 20px;
+  }
+
+  .hero-image img {
+    max-height: 250px;
+  }
+
+  .about {
+    padding: 40px 20px;
+  }
+
+  .about-top {
+    padding: 30px 25px;
+    border-radius: 20px;
+  }
+
+  .about-title {
+    font-size: 32px;
+  }
+
+  .about-box {
+    padding: 25px;
+    border-radius: 20px;
+  }
+
+  .about-top-text,
+  .about-box-text,
+  .about-box-text-highlight {
+    font-size: 15px;
+  }
+
+  /* Add Skills responsive styles for small mobile */
+  .skills {
+    padding: 40px 15px;
+  }
+
+  .skills-title {
+    font-size: 32px;
+    margin-bottom: 25px;
+  }
+
+  .skills-container {
+    padding: 30px 20px;
+    border-radius: 20px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px 15px;
+  }
+
+  .skill-item img {
+    width: 45px;
+    height: 45px;
+  }
+
+  /* Projects responsive for small mobile */
+  .projects {
+    padding: 40px 15px;
+  }
+
+  .project-card,
+  .title-card,
+  .more-card {
+    min-height: 180px;
+    border-radius: 25px;
+  }
+
+  .flip-card-inner,
+  .flip-card-front,
+  .flip-card-back {
+    min-height: 180px;
+  }
+
+  .flip-card-front,
+  .flip-card-back,
+  .flip-card-front img {
+    border-radius: 25px;
+  }
+
+  .flip-card-back {
+    padding: 20px;
+  }
+
+  .projects-title {
+    font-size: 36px;
+  }
+
+  .flip-card-back h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .card-description {
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+
+  .card-tech {
+    font-size: 12px;
+  }
+
+  .skill-item span {
+    font-size: 13px;
+  }
+
+  /* Contact responsive for small mobile */
+  .contact {
+    padding: 40px 15px;
+  }
+
+  .contact-box {
+    padding: 35px 25px;
+    border-radius: 25px;
+  }
+
+  .contact-title {
+    font-size: 30px;
+  }
+
+  .contact-subtitle {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+
+  .contact-icons {
+    gap: 25px;
+    margin-bottom: 30px;
+  }
+
+  .contact-icon svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .contact-btn {
+    font-size: 16px;
+    padding: 12px 25px;
+  }
+}
