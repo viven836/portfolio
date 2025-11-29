@@ -29,7 +29,6 @@ https://eeshakarpuradu.github.io/portfolio/
 ## Contact
 If you’d like to reach out or collaborate:
 - **Email:** eeshak0503@gmail.com  
-- 
 
 
 Thanks for checking out my portfolio!  
